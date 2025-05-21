@@ -1,0 +1,34 @@
+class Coche:
+    def __init__(self, marca, modelo, año):
+        self.__marca = marca
+        self.__modelo = modelo
+        self.__año = año
+
+    def mostrar_informacion(self):
+        print(f"Coche: {self.__marca} {self.__modelo}, Año: {self.__año}")
+
+    def get_marca(self):
+        return self.__marca
+
+    def get_modelo(self):
+        return self.__modelo
+
+    def get_año(self):
+        return self.__año
+
+    def set_marca(self, nueva_marca):
+        self.__marca = nueva_marca
+
+    def set_modelo(self, nuevo_modelo):
+        self.__modelo = nuevo_modelo
+
+    def set_año(self, nuevo_año):
+        self.__año = nuevo_año
+
+
+mi_coche = Coche("Ford", "Mustang", 2022)
+mi_coche.mostrar_informacion()
+
+print("Marca:", mi_coche.get_marca())
+print("Modelo:", mi_coche.get_modelo())
+print("Año:", mi_coche.get_año())
