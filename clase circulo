@@ -1,0 +1,18 @@
+import math
+
+class circulo:
+    def __init__(self,radio):
+        if radio >= 0:
+            self.__radio=radio
+        else:
+            self.__radio=0
+
+    def calcular_area(self):
+        return math.pi*self.__radio ** 2
+
+    def calcular_circunferencia(self):
+        return 2*math.pi*self.__radio
+
+circulo=circulo(3)
+print("Área:", circulo.calcular_area())
+print("Circunferencia:", circulo.calcular_circunferencia())
