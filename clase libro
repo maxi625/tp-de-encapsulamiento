@@ -1,0 +1,15 @@
+class libro:
+    def __init__(self,titulo,autor,año):
+        self.__titulo=titulo
+        self.__autor=autor
+        self.__año=año
+
+    def descripcion(self):
+        print(self.__titulo,self.__autor,self.__año)
+
+    def es_clasico(self):
+        print("Clásico" if 2025 - self.__año > 50 else "No clásico")
+
+libro=libro("1984", "Orwell", 1949)
+libro.descripcion()
+libro.es_clasico()
