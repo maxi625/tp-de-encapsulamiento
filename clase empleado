@@ -1,37 +1,18 @@
-class Empleado:
-    
-    def __init__(self, nombre, salario, departamento):
-        self.__nombre = nombre
-        self.__salario = salario
-        self.__departamento = departamento
+class empleado:
+    def __init__(self,nombre,salario,departamento):
+        self.__nombre=nombre
+        self.__salario=salario
+        self.__departamento=departamento
 
     def aumentar_salario(self, porcentaje):
-        if porcentaje > 0:
-            aumento = self.__salario * (porcentaje / 100)
-            self.__salario += aumento
-            print(f"Salario aumentado en un {porcentaje}%. Nuevo salario: ${self.__salario:.2f}")
-        else:
-            print("El porcentaje debe ser positivo.")
+        self.__salario += self.__salario * (porcentaje / 100)
 
-    def mostrar_informacion(self):
-        print(f"Nombre: {self.__nombre}")
-        print(f"Departamento: {self.__departamento}")
-        print(f"Salario: ${self.__salario:.2f}")
+    def mostrar_info(self):
+        print("nombre:", self.__nombre)
+        print("salario:", self.__salario)
+        print("departamento:", self.__departamento)
 
-    def get_nombre(self):
-        return self.__nombre
-
-    def get_salario(self):
-        return self.__salario
-
-    def get_departamento(self):
-        return self.__departamento
-
-
-empleado1 = Empleado("Dilan Fernandes", 3000.00, "Recursos Humanos")
-empleado1.mostrar_informacion()
-
-empleado1.aumentar_salario(10)  
-
-print("\nDespués del aumento:")
-empleado1.mostrar_informacion()
+empleado=empleado("maxi", 40000, "ventas")
+empleado.mostrar_info()
+empleado.aumentar_salario(10)
+empleado.mostrar_info()
