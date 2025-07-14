@@ -1,0 +1,18 @@
+class cuentabancaria:
+    def __init__(self,titular,saldo,numero_cuenta):
+        self.__titular =titular
+        self.__saldo =saldo
+        self.__numero =numero_cuenta
+
+    def depositar(self,monto): self.__saldo +=monto
+    def retirar(self, monto):
+        if monto<=self.__saldo: self.__saldo -=monto
+    def mostrar(self):
+
+        print(self.__titular, self.__saldo, self.__numero)
+
+cuentabancaria=cuentabancaria("maxi", 1000, "123")
+cuentabancaria.mostrar()
+cuentabancaria.depositar(200)
+cuentabancaria.retirar(100)
+cuentabancaria.mostrar()
