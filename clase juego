@@ -11,9 +11,9 @@ class juego:
 
     def esta_en_oferta(self, limite):
         if self.__precio < limite:
-            print("está en oferta")
+            print("esta en oferta")
         else:
-            print("no está en oferta")
+            print("no esta en oferta")
 
 juego=juego("minecraft", "aventura", 2000)
 juego.mostrar_info()
