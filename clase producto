@@ -11,14 +11,14 @@ class producto:
         if cantidad <= self.__stock:
             self.__stock -=cantidad
         else:
-            print("No hay lo suficiente stock")
+            print("no hay lo suficiente en stock")
 
     def mostrar_info(self):
         print("nombre:", self.__nombre)
         print("precio:", self.__precio)
         print("stock:", self.__stock)
 
-producto=producto("Lapicera", 150, 10)
+producto=producto("lapicera", 150, 10)
 producto.mostrar_info()
 producto.aumentar_stock(5)
 producto.disminuir_stock(8)
